@@ -23,89 +23,102 @@ public class Main {
         // TODO code application logic here
 
         //Ejercicio 4
-        List<Coche> coches = new ArrayList<>();
-
-        coches.add(new Coche(Marca.CITROEN, "Xsara", 125, "48587160M"));
-        coches.add(new Coche(Marca.FORD, "Escort", 125, "48597167Q"));
-        coches.add(new Coche(Marca.FORD, "Mustang", 95, "48588160M"));
-        coches.add(new Coche(Marca.CITROEN, "Xsara", 100, "89687160M"));
-        coches.add(new Coche(Marca.RENAULT, "Picasso", 200, "12587160M"));
-
-        for (Coche coche : coches) {
-            if (coches.indexOf(coche) == 1) {
-                System.out.println("Marca:" + coche.getMarca()
-                        + " Modelo:" + coche.getModelo() + " Cilindrada:"
-                        + coche.getCilindrada() + " DNI:"
-                        + coche.getDniPropietario());
-            }
-        }
-        System.out.println("-----------------");
-
-        for (Coche coche : coches) {
-            System.out.println("Marca: " + coche.getMarca() + " Modelo:" + coche.getModelo());
-        }
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("-----------------");
-        System.out.println("Dime el DNI: ");
-        String dni = scanner.next();
-
-        for (Coche coche : coches) {
-            String dniPropietario = coche.getDniPropietario();
-            if (dniPropietario.equals(dni)) {
-                System.out.println("Modelo: " + coche.getModelo());
-            }
-        }
-
-        System.out.println("-----------------");
-        for (Coche coche : coches) {
-
-            if (coche.getMarca().equals(Marca.FORD)) {
-                System.out.println("Marca:" + coche.getMarca()
-                        + " Modelo:" + coche.getModelo() + " Cilindrada:"
-                        + coche.getCilindrada() + " DNI:"
-                        + coche.getDniPropietario());
-            }
-        }
-
-        //Ejercicio 5
-        System.out.println("-----------------");
-        Map<String, Coche> mapCoche = new HashMap<String, Coche>();
-
-        mapCoche.put("08587160M", new Coche(Marca.CITROEN, "Xsara", 125, "08587160M"));
-        mapCoche.put("12345678Z", new Coche(Marca.FORD, "Escort", 125, "12345678Z"));
-        mapCoche.put("55520160M", new Coche(Marca.FORD, "Mustang", 95, "55520160M"));
-        mapCoche.put("7857160M", new Coche(Marca.CITROEN, "Xsara", 100, "7857160M"));
-        mapCoche.put("48417160M", new Coche(Marca.RENAULT, "Picasso", 200, "48417160M"));
-
-        System.out.println("Marca: " + mapCoche.get("12345678Z").getMarca());
-        System.out.println("Cilindrada: " + mapCoche.get("12345678Z").getCilindrada());
-        System.out.println("Modelo: " + mapCoche.get("12345678Z").getModelo());
-        System.out.println("Dni: " + mapCoche.get("12345678Z").getDniPropietario());
-
-        System.out.println("-----------------");
-
-        for (String clave : mapCoche.keySet()) {
-            System.out.println("DNI:" + mapCoche.get(clave).getDniPropietario()
-                    + " Marca: " + mapCoche.get(clave).getModelo() + " Modelo: "
-                    + mapCoche.get(clave).getMarca());
-        }
-
-        System.out.println("-----------------");
-
-        System.out.println("Dime un DNI:");
-        dni = scanner.next();
-
-        System.out.println("Modelo: " + mapCoche.get(dni).getModelo());
-
-        System.out.println("-----------------");
-
-        for (String clave : mapCoche.keySet()) {
-            if (mapCoche.get(clave).getMarca() == Marca.FORD) {
-                System.out.println("DNI:" + mapCoche.get(clave).getDniPropietario()
-                        + " Marca: " + mapCoche.get(clave).getModelo() + " Modelo: "
-                        + mapCoche.get(clave).getMarca());
-            }
-        }
+//        List<Coche> coches = new ArrayList<>();
+//
+//        coches.add(new Coche(Marca.CITROEN, "Xsara", 125, "48587160M"));
+//        coches.add(new Coche(Marca.FORD, "Escort", 125, "48597167Q"));
+//        coches.add(new Coche(Marca.FORD, "Mustang", 95, "48588160M"));
+//        coches.add(new Coche(Marca.CITROEN, "Xsara", 100, "89687160M"));
+//        coches.add(new Coche(Marca.RENAULT, "Picasso", 200, "12587160M"));
+//
+//        for (Coche coche : coches) {
+//            if (coches.indexOf(coche) == 1) {
+//                System.out.println("Marca:" + coche.getMarca()
+//                        + " Modelo:" + coche.getModelo() + " Cilindrada:"
+//                        + coche.getCilindrada() + " DNI:"
+//                        + coche.getDniPropietario());
+//            }
+//        }
+//        System.out.println("-----------------");
+//
+//        for (Coche coche : coches) {
+//            System.out.println("Marca: " + coche.getMarca() + " Modelo:" + coche.getModelo());
+//        }
+//
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("-----------------");
+//        System.out.println("Dime el DNI: ");
+//        String dni = scanner.next();
+//
+//        for (Coche coche : coches) {
+//            String dniPropietario = coche.getDniPropietario();
+//            if (dniPropietario.equals(dni)) {
+//                System.out.println("Modelo: " + coche.getModelo());
+//            }
+//        }
+//
+//        System.out.println("-----------------");
+//        for (Coche coche : coches) {
+//
+//            if (coche.getMarca().equals(Marca.FORD)) {
+//                System.out.println("Marca:" + coche.getMarca()
+//                        + " Modelo:" + coche.getModelo() + " Cilindrada:"
+//                        + coche.getCilindrada() + " DNI:"
+//                        + coche.getDniPropietario());
+//            }
+//        }
+//
+//        //Ejercicio 5
+//        System.out.println("-----------------");
+//        Map<String, Coche> mapCoche = new HashMap<String, Coche>();
+//
+//        mapCoche.put("08587160M", new Coche(Marca.CITROEN, "Xsara", 125, "08587160M"));
+//        mapCoche.put("12345678Z", new Coche(Marca.FORD, "Escort", 125, "12345678Z"));
+//        mapCoche.put("55520160M", new Coche(Marca.FORD, "Mustang", 95, "55520160M"));
+//        mapCoche.put("7857160M", new Coche(Marca.CITROEN, "Xsara", 100, "7857160M"));
+//        mapCoche.put("48417160M", new Coche(Marca.RENAULT, "Picasso", 200, "48417160M"));
+//
+//        System.out.println("Marca: " + mapCoche.get("12345678Z").getMarca());
+//        System.out.println("Cilindrada: " + mapCoche.get("12345678Z").getCilindrada());
+//        System.out.println("Modelo: " + mapCoche.get("12345678Z").getModelo());
+//        System.out.println("Dni: " + mapCoche.get("12345678Z").getDniPropietario());
+//
+//        System.out.println("-----------------");
+//
+//        for (String clave : mapCoche.keySet()) {
+//            System.out.println("DNI:" + mapCoche.get(clave).getDniPropietario()
+//                    + " Marca: " + mapCoche.get(clave).getModelo() + " Modelo: "
+//                    + mapCoche.get(clave).getMarca());
+//        }
+//
+//        System.out.println("-----------------");
+//
+//        System.out.println("Dime un DNI:");
+//        dni = scanner.next();
+//
+//        System.out.println("Modelo: " + mapCoche.get(dni).getModelo());
+//
+//        System.out.println("-----------------");
+//
+//        for (String clave : mapCoche.keySet()) {
+//            if (mapCoche.get(clave).getMarca() == Marca.FORD) {
+//                System.out.println("DNI:" + mapCoche.get(clave).getDniPropietario()
+//                        + " Marca: " + mapCoche.get(clave).getModelo() + " Modelo: "
+//                        + mapCoche.get(clave).getMarca());
+//            }
+//        }
+        
+        
+        Persona persona1 = new Persona("4S", "Roberto", "Hernando", Sexo.MASCULINO);
+        Coche coche1 = new Coche(Marca.CITROEN, "Xsara", 3000, null);
+        coche1.setPropietario(persona1);
+        Coche coche2 = new Coche(Marca.CITROEN, "Xsara", 3000, null);
+        coche2.setPropietario(persona1);
+        
+        List<Coche> coches = persona1.getCoches();
+        coches.add(coche1);
+        coches.add(coche2);
+        
+        
     }
 }
